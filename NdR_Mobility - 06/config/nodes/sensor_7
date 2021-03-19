@@ -1,0 +1,13 @@
+List of parameters
+------------------------------------------
+device_type:1
+device_id:7
+device_longitude:-4.498599283397198
+device_latitude:48.38944973219169
+device_elevation:0.0
+device_radius:0.0
+device_hide:0
+device_draw_battery:false
+device_sensor_unit_radius:20.0
+device_gps_file_name:main.gps
+device_script_file_name:car2.csc
