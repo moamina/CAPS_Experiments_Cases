@@ -5,15 +5,16 @@ rdata $x a b c
 data p $id $c
 if($c<20)
 then
-	send $p 11
-	delay 600
+	send $p 3
+	delay 900
 else
 	if(($c>=20) && ($c<25))
 	then
 		send $p 4
-		delay 600
+		delay 900
 	else		
 		send $p 4
-		delay 2600
+		delay 2200
 	end
 end
+

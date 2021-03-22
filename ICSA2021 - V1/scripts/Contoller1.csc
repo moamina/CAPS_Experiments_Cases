@@ -4,4 +4,4 @@ read x
 #println $x
 time t
 #printfile $t $x
-send $x 29
+send $x 4

@@ -1,16 +1,19 @@
+atget id id
 loop
 areadsensor x
 rdata $x a b c
+data p $id $c
 if($c<20)
 then
-	send $c 11
+	send $p 11
+	delay 600
 else
 	if(($c>=20) && ($c<25))
 	then
-		send $c 4
-	else
-		delay 2000
-		send $c 4
+		send $p 4
+		delay 600
+	else		
+		send $p 4
+		delay 2600
 	end
 end
-delay 2000
