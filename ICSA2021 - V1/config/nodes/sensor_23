@@ -2,11 +2,11 @@ List of parameters
 ------------------------------------------
 device_type:1
 device_id:23
-device_longitude:-4.490302205085754
-device_latitude:48.39085348814016
+device_longitude:-4.489958882331848
+device_latitude:48.39108146931543
 device_elevation:0.0
 device_radius:0.0
 device_hide:0
 device_draw_battery:false
-device_sensor_unit_radius:35.0
+device_sensor_unit_radius:30.0
 device_script_file_name:SmartCarpit.csc

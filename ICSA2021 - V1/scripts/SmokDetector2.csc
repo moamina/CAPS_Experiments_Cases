@@ -6,7 +6,7 @@ data p $id $c
 if($c<20)
 then
 	send $p 11
-	delay 900
+	delay 500
 else
 	if(($c>=20) && ($c<25))
 	then
@@ -14,6 +14,6 @@ else
 		delay 600
 	else		
 		send $p 11
-		delay 700
+		delay 900
 	end
 end
