@@ -1,17 +1,16 @@
 loop
 areadsensor x
 rdata $x a b c
-if($c<20)
-then
-	send $c 11
-	delay 1000
-else
-	if(($c>=20) && ($c<25))
-	then
-		send $c 4
-		delay 600
-	else
-		delay 1000
-		send $c 11
-	end
+data p $id $c
+function y adapter p1en,100,10
+if($y==10.0)
+	send $p 11
 end
+if($y==20.0)
+	send $p 4
+end
+if($y==30.0)
+	#Internal Processing
+	send $p $id		
+end
+delay 1000
