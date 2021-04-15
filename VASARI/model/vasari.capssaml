@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components:SoftwareArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:components="components">
+  <SAElements xsi:type="components:Component" name="RFID_Reader">
+    <ports xsi:type="components:OutMessagePort" name="RFID1_Out_Message_Port"/>
+    <modes xsi:type="components:InitialMode" name="Normal">
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.0/@modes.0/@behaviouralElements.7" incoming="//@SAElements.0/@modes.0/@behaviouralElements.6" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.0/@modes.0/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:ReadRfid" name="Get" outgoing="//@SAElements.0/@modes.0/@behaviouralElements.4" incoming="//@SAElements.0/@modes.0/@behaviouralElements.7" dataDeclarationName="TagIDCounter" data="TagIDCounter" dataRecipient="//@SAElements.0/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="Normal" outgoing="//@SAElements.0/@modes.0/@behaviouralElements.5" incoming="//@SAElements.0/@modes.0/@behaviouralElements.4" data="TagIDCounter" toMessagePorts="//@SAElements.0/@ports.0" dataRecipient="//@SAElements.0/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.0/@behaviouralElements.2" target="//@SAElements.0/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.0/@behaviouralElements.3" target="//@SAElements.0/@modes.0/@exits.0" condition="TagIDCounter > 10"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.0/@behaviouralElements.1" target="//@SAElements.0/@modes.0/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.0/@behaviouralElements.0" target="//@SAElements.0/@modes.0/@behaviouralElements.2"/>
+      <entries name="Enter Normal Mode"/>
+      <exits name="ExitNormal" incoming="//@SAElements.0/@modes.0/@behaviouralElements.5" targetMode="//@SAElements.0/@modes.1/@entries.0"/>
+    </modes>
+    <modes name="Critical">
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.0/@modes.1/@behaviouralElements.7" incoming="//@SAElements.0/@modes.1/@behaviouralElements.6" cyclic="true" delay="30000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.0/@modes.1/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:ReadRfid" name="Get" outgoing="//@SAElements.0/@modes.1/@behaviouralElements.4" incoming="//@SAElements.0/@modes.1/@behaviouralElements.7" dataDeclarationName="TagIDCounter" data="TagIDCounter" dataRecipient="//@SAElements.0/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" outgoing="//@SAElements.0/@modes.1/@behaviouralElements.5" incoming="//@SAElements.0/@modes.1/@behaviouralElements.4" data="TagIDCounter" toMessagePorts="//@SAElements.0/@ports.0" dataRecipient="//@SAElements.0/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.1/@behaviouralElements.2" target="//@SAElements.0/@modes.1/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.1/@behaviouralElements.3" target="//@SAElements.0/@modes.1/@exits.0" condition="TagIDCounter &lt; 10"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.1/@behaviouralElements.1" target="//@SAElements.0/@modes.1/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.0/@modes.1/@behaviouralElements.0" target="//@SAElements.0/@modes.1/@behaviouralElements.2"/>
+      <entries name="EnterCritical"/>
+      <exits name="Exit Critical Mode" incoming="//@SAElements.0/@modes.1/@behaviouralElements.5" targetMode="//@SAElements.0/@modes.0/@entries.0"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="RFID1_TagIDCounter" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="BeaconsART1">
+    <ports xsi:type="components:OutMessagePort" name="Beacon_ART1_OMP"/>
+    <modes xsi:type="components:InitialMode" name="BeaconNormal_1">
+      <behaviouralElements xsi:type="components:SensePosition" name="get" outgoing="//@SAElements.1/@modes.0/@behaviouralElements.5" incoming="//@SAElements.1/@modes.0/@behaviouralElements.3" dataDeclarationName="BeaconArt1_Data" data="BeaconArt1_Data" dataRecipient="//@SAElements.1/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:StartTimer" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.1/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.1/@modes.0/@behaviouralElements.2" target="//@SAElements.1/@modes.0/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:BroadcastSendMessage" name="Send" incoming="//@SAElements.1/@modes.0/@behaviouralElements.5" data="BeaconArt1_Data" toMessagePorts="//@SAElements.1/@ports.0" dataRecipient="//@SAElements.1/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.1/@modes.0/@behaviouralElements.0" target="//@SAElements.1/@modes.0/@behaviouralElements.4"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="BeaconArt1_Data" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="Smart Carpets">
+    <ports xsi:type="components:OutMessagePort" name="RFID2_Out_MessagePort"/>
+    <modes xsi:type="components:InitialMode" name="Normal_2">
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.2/@modes.0/@behaviouralElements.7" incoming="//@SAElements.2/@modes.0/@behaviouralElements.6" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.2/@modes.0/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" outgoing="//@SAElements.2/@modes.0/@behaviouralElements.3" incoming="//@SAElements.2/@modes.0/@behaviouralElements.5" data="TagIDCounter" toMessagePorts="//@SAElements.2/@ports.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.0/@behaviouralElements.2" target="//@SAElements.2/@modes.0/@exits.0"/>
+      <behaviouralElements xsi:type="components:ReadRfid" outgoing="//@SAElements.2/@modes.0/@behaviouralElements.5" incoming="//@SAElements.2/@modes.0/@behaviouralElements.7" dataDeclarationName="TagIDCounter2" data="TagIDCounter2" dataRecipient="//@SAElements.2/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.0/@behaviouralElements.4" target="//@SAElements.2/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.0/@behaviouralElements.1" target="//@SAElements.2/@modes.0/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.0/@behaviouralElements.0" target="//@SAElements.2/@modes.0/@behaviouralElements.4"/>
+      <entries name="EnterNormal_2"/>
+      <exits name="ExitNormal_2" incoming="//@SAElements.2/@modes.0/@behaviouralElements.3" targetMode="//@SAElements.2/@modes.1/@entries.0"/>
+    </modes>
+    <modes name="Critical_2">
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.2/@modes.1/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.2/@modes.1/@behaviouralElements.7" incoming="//@SAElements.2/@modes.1/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" outgoing="//@SAElements.2/@modes.1/@behaviouralElements.5" incoming="//@SAElements.2/@modes.1/@behaviouralElements.4" data="TagIDCounter" toMessagePorts="//@SAElements.2/@ports.0" dataRecipient="//@SAElements.2/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:ReadRfid" name="Get " outgoing="//@SAElements.2/@modes.1/@behaviouralElements.4" incoming="//@SAElements.2/@modes.1/@behaviouralElements.7" dataDeclarationName="TagIDCounter2" data="TagIDCounter2" dataRecipient="//@SAElements.2/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.1/@behaviouralElements.3" target="//@SAElements.2/@modes.1/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.1/@behaviouralElements.2" target="//@SAElements.2/@modes.1/@exits.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.1/@behaviouralElements.0" target="//@SAElements.2/@modes.1/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.2/@modes.1/@behaviouralElements.1" target="//@SAElements.2/@modes.1/@behaviouralElements.3"/>
+      <entries name="EnterCritical_2"/>
+      <exits name="ExitCritical_2" incoming="//@SAElements.2/@modes.1/@behaviouralElements.5" targetMode="//@SAElements.2/@modes.0/@entries.0"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="RFID2_TagIDCounter_2" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="BeaconART2">
+    <ports xsi:type="components:OutMessagePort" name="Beacon_ART2_OMP"/>
+    <modes xsi:type="components:InitialMode" name="BeaconNormal_2">
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.3/@modes.0/@behaviouralElements.6" incoming="//@SAElements.3/@modes.0/@behaviouralElements.5" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.3/@modes.0/@behaviouralElements.5"/>
+      <behaviouralElements xsi:type="components:SensePosition" name="get" outgoing="//@SAElements.3/@modes.0/@behaviouralElements.4" incoming="//@SAElements.3/@modes.0/@behaviouralElements.6" dataDeclarationName="BeaconArt2_Data" data="BeaconArt2_Data" dataRecipient="//@SAElements.3/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:BroadcastSendMessage" name="send" incoming="//@SAElements.3/@modes.0/@behaviouralElements.4" data="BeaconArt2_Data" toMessagePorts="//@SAElements.3/@ports.0" dataRecipient="//@SAElements.3/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.3/@modes.0/@behaviouralElements.2" target="//@SAElements.3/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.3/@modes.0/@behaviouralElements.1" target="//@SAElements.3/@modes.0/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.3/@modes.0/@behaviouralElements.0" target="//@SAElements.3/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="BeaconArt2_Data" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="BeaconART3" ClientOrServer="client">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes xsi:type="components:InitialMode">
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.4/@modes.0/@behaviouralElements.6" incoming="//@SAElements.4/@modes.0/@behaviouralElements.5" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.4/@modes.0/@behaviouralElements.5"/>
+      <behaviouralElements xsi:type="components:SensePosition" name="get" outgoing="//@SAElements.4/@modes.0/@behaviouralElements.4" incoming="//@SAElements.4/@modes.0/@behaviouralElements.6" dataDeclarationName="BeaconArt3_Data" data="BeaconArt3_Data" dataRecipient="//@SAElements.4/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:BroadcastSendMessage" name="send" incoming="//@SAElements.4/@modes.0/@behaviouralElements.4" data="BeaconArt3_Data" toMessagePorts="//@SAElements.4/@ports.0" dataRecipient="//@SAElements.4/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.4/@modes.0/@behaviouralElements.2" target="//@SAElements.4/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.4/@modes.0/@behaviouralElements.1" target="//@SAElements.4/@modes.0/@behaviouralElements.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.4/@modes.0/@behaviouralElements.0" target="//@SAElements.4/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="BeaconArt3_Data" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="Mobile">
+    <ports xsi:type="components:InMessagePort" name=""/>
+    <ports xsi:type="components:OutMessagePort" name="Mobile1_OMP"/>
+    <ports xsi:type="components:InMessagePort" name="Mobile1_IMP2"/>
+    <modes name="Query Mode">
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" incoming="//@SAElements.5/@modes.0/@behaviouralElements.8" data="ArtworkID" toMessagePorts="//@SAElements.5/@ports.1" dataRecipient="//@SAElements.5/@applicationData.2"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.5/@modes.0/@behaviouralElements.4" dataRecipientName="ArtworkInfo" fromMessagePorts="//@SAElements.5/@ports.2" dataRecipient="//@SAElements.5/@applicationData.1"/>
+      <behaviouralElements xsi:type="components:StartTimer" incoming="//@SAElements.5/@modes.0/@behaviouralElements.6" cyclic="true" delay="60000"/>
+      <behaviouralElements xsi:type="components:TouchScreen" name="Display" incoming="//@SAElements.5/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.5/@modes.0/@behaviouralElements.1" target="//@SAElements.5/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.5/@modes.0/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.5/@modes.0/@behaviouralElements.5" target="//@SAElements.5/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.5/@modes.0/@behaviouralElements.8" dataRecipientName="BeaconData" fromMessagePorts="//@SAElements.5/@ports.0" dataRecipient="//@SAElements.5/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.5/@modes.0/@behaviouralElements.7" target="//@SAElements.5/@modes.0/@behaviouralElements.0"/>
+      <entries name="EnterMode"/>
+      <exits name="ExitQueryMode"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="BeaconData"/>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="ArtworkInfo" value="" type="string"/>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="ArtworkID"/>
+  </SAElements>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.1/@ports.0" target="//@SAElements.5/@ports.0"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.3/@ports.0" target="//@SAElements.5/@ports.0"/>
+  <SAElements xsi:type="components:Component" name="VASARI Cloud">
+    <ports xsi:type="components:InMessagePort"/>
+    <ports xsi:type="components:OutMessagePort"/>
+    <ports xsi:type="components:InMessagePort"/>
+    <ports xsi:type="components:InMessagePort"/>
+    <ports xsi:type="components:InMessagePort"/>
+    <modes xsi:type="components:InitialMode">
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.3" dataRecipientName="ArtworkID" fromMessagePorts="//@SAElements.8/@ports.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" incoming="//@SAElements.8/@modes.0/@behaviouralElements.4" data="ArtworkInfo" toMessagePorts="//@SAElements.8/@ports.1"/>
+      <behaviouralElements xsi:type="components:CallSyncService" name="" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.4 //@SAElements.8/@modes.0/@behaviouralElements.10" incoming="//@SAElements.8/@modes.0/@behaviouralElements.3 //@SAElements.8/@modes.0/@behaviouralElements.6 //@SAElements.8/@modes.0/@behaviouralElements.8 //@SAElements.8/@modes.0/@behaviouralElements.13 //@SAElements.8/@modes.0/@behaviouralElements.14" data="Call"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.0" target="//@SAElements.8/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.2" target="//@SAElements.8/@modes.0/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="receive" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.6" dataRecipientName="Data"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.5" target="//@SAElements.8/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.8" dataRecipientName="RFIDData" fromMessagePorts="//@SAElements.8/@ports.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.7" target="//@SAElements.8/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" incoming="//@SAElements.8/@modes.0/@behaviouralElements.10" data="Data"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.2" target="//@SAElements.8/@modes.0/@behaviouralElements.9"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.13" dataRecipientName="Values" fromMessagePorts="//@SAElements.8/@ports.3"/>
+      <behaviouralElements xsi:type="components:ReceiveMessage" name="get" outgoing="//@SAElements.8/@modes.0/@behaviouralElements.14" dataRecipientName="Values" fromMessagePorts="//@SAElements.8/@ports.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.11" target="//@SAElements.8/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.8/@modes.0/@behaviouralElements.12" target="//@SAElements.8/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="ArtworkID"/>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="ArtworkInfo"/>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="RFIDData"/>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration"/>
+  </SAElements>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.0/@ports.0" target="//@SAElements.8/@ports.2"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.2/@ports.0" target="//@SAElements.8/@ports.2"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.5/@ports.1" target="//@SAElements.8/@ports.0"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.8/@ports.1" target="//@SAElements.5/@ports.2"/>
+  <SAElements xsi:type="components:Component" name="IR People Counter">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" incoming="//@SAElements.13/@modes.0/@behaviouralElements.8" data="PeopleCounter" toMessagePorts="//@SAElements.13/@ports.0" dataRecipient="//@SAElements.13/@applicationData.0" receiverName=""/>
+      <behaviouralElements xsi:type="components:Human" outgoing="//@SAElements.13/@modes.0/@behaviouralElements.7" incoming="//@SAElements.13/@modes.0/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:CountPeople" name="get" outgoing="//@SAElements.13/@modes.0/@behaviouralElements.8" incoming="//@SAElements.13/@modes.0/@behaviouralElements.7" dataDeclarationName="PeopleCounter" data="PeopleCounter" dataRecipient="//@SAElements.13/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.13/@modes.0/@behaviouralElements.5"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.13/@modes.0/@behaviouralElements.6" incoming="//@SAElements.13/@modes.0/@behaviouralElements.5" cyclic="true" delay="1000"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.13/@modes.0/@behaviouralElements.3" target="//@SAElements.13/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.13/@modes.0/@behaviouralElements.4" target="//@SAElements.13/@modes.0/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.13/@modes.0/@behaviouralElements.1" target="//@SAElements.13/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.13/@modes.0/@behaviouralElements.2" target="//@SAElements.13/@modes.0/@behaviouralElements.0"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="PeopleCounter" value="0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="Smok Detector">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.14/@modes.0/@behaviouralElements.4" timerName=""/>
+      <behaviouralElements xsi:type="components:SenseOxygen" name="get" outgoing="//@SAElements.14/@modes.0/@behaviouralElements.6" incoming="//@SAElements.14/@modes.0/@behaviouralElements.5" dataDeclarationName="SmokDegree" data="" dataRecipient="//@SAElements.14/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" incoming="//@SAElements.14/@modes.0/@behaviouralElements.6" toMessagePorts="//@SAElements.14/@ports.0"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.14/@modes.0/@behaviouralElements.5" incoming="//@SAElements.14/@modes.0/@behaviouralElements.4" cyclic="true" delay="1000"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.14/@modes.0/@behaviouralElements.0" target="//@SAElements.14/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.14/@modes.0/@behaviouralElements.3" target="//@SAElements.14/@modes.0/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.14/@modes.0/@behaviouralElements.1" target="//@SAElements.14/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="SmokDegree"/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="CCTV Camera">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.15/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:CCTVCcapture" name="take a picture" outgoing="//@SAElements.15/@modes.0/@behaviouralElements.6" incoming="//@SAElements.15/@modes.0/@behaviouralElements.5" dataDeclarationName="Picture" data="Picture" dataRecipient="//@SAElements.15/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" incoming="//@SAElements.15/@modes.0/@behaviouralElements.6" toMessagePorts="//@SAElements.15/@ports.0"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.15/@modes.0/@behaviouralElements.5" incoming="//@SAElements.15/@modes.0/@behaviouralElements.4" delay="1000"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.15/@modes.0/@behaviouralElements.0" target="//@SAElements.15/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.15/@modes.0/@behaviouralElements.3" target="//@SAElements.15/@modes.0/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.15/@modes.0/@behaviouralElements.1" target="//@SAElements.15/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="Picture" value=""/>
+  </SAElements>
+  <SAElements xsi:type="components:Component" name="Barcode">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.16/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" name="" incoming="//@SAElements.16/@modes.0/@behaviouralElements.6" data="BarCode" toMessagePorts="//@SAElements.16/@ports.0" dataRecipient="//@SAElements.16/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.16/@modes.0/@behaviouralElements.5" incoming="//@SAElements.16/@modes.0/@behaviouralElements.4" cyclic="true" delay="1000"/>
+      <behaviouralElements xsi:type="components:ReadSmartCard" name="get" outgoing="//@SAElements.16/@modes.0/@behaviouralElements.6" incoming="//@SAElements.16/@modes.0/@behaviouralElements.5" dataDeclarationName="BarCode" data="BarCode" dataRecipient="//@SAElements.16/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.16/@modes.0/@behaviouralElements.0" target="//@SAElements.16/@modes.0/@behaviouralElements.2"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.16/@modes.0/@behaviouralElements.2" target="//@SAElements.16/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.16/@modes.0/@behaviouralElements.3" target="//@SAElements.16/@modes.0/@behaviouralElements.1"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="BarCode"/>
+  </SAElements>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.4/@ports.0" target="//@SAElements.5/@ports.0"/>
+  <SAElements xsi:type="components:Component" name="Weather Monitoring Station">
+    <ports xsi:type="components:OutMessagePort"/>
+    <modes>
+      <behaviouralElements xsi:type="components:TimerFired" outgoing="//@SAElements.18/@modes.0/@behaviouralElements.6"/>
+      <behaviouralElements xsi:type="components:SenseWind" name="get" outgoing="//@SAElements.18/@modes.0/@behaviouralElements.9" incoming="//@SAElements.18/@modes.0/@behaviouralElements.7" dataDeclarationName="Wind Speed" data="Weather" dataRecipient="//@SAElements.18/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:SenseTemperature" name="get" outgoing="//@SAElements.18/@modes.0/@behaviouralElements.8" incoming="//@SAElements.18/@modes.0/@behaviouralElements.12" dataDeclarationName="Temprreature" dataRecipient="//@SAElements.18/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:SenseHumidity" name="get" outgoing="//@SAElements.18/@modes.0/@behaviouralElements.10" incoming="//@SAElements.18/@modes.0/@behaviouralElements.11" dataDeclarationName="Humidity" data="" dataRecipient="//@SAElements.18/@applicationData.0"/>
+      <behaviouralElements xsi:type="components:UnicastSendMessage" incoming="//@SAElements.18/@modes.0/@behaviouralElements.8 //@SAElements.18/@modes.0/@behaviouralElements.9 //@SAElements.18/@modes.0/@behaviouralElements.10" toMessagePorts="//@SAElements.18/@ports.0"/>
+      <behaviouralElements xsi:type="components:StartTimer" outgoing="//@SAElements.18/@modes.0/@behaviouralElements.7 //@SAElements.18/@modes.0/@behaviouralElements.11 //@SAElements.18/@modes.0/@behaviouralElements.12" incoming="//@SAElements.18/@modes.0/@behaviouralElements.6" cyclic="true" delay="1000"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.0" target="//@SAElements.18/@modes.0/@behaviouralElements.5"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.5" target="//@SAElements.18/@modes.0/@behaviouralElements.1"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.2" target="//@SAElements.18/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.1" target="//@SAElements.18/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.3" target="//@SAElements.18/@modes.0/@behaviouralElements.4"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.5" target="//@SAElements.18/@modes.0/@behaviouralElements.3"/>
+      <behaviouralElements xsi:type="components:Link" source="//@SAElements.18/@modes.0/@behaviouralElements.5" target="//@SAElements.18/@modes.0/@behaviouralElements.2"/>
+    </modes>
+    <applicationData xsi:type="components:PrimitiveDataDeclaration" dataName="Weather" value="0,0,0"/>
+  </SAElements>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.13/@ports.0" target="//@SAElements.8/@ports.3"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.14/@ports.0" target="//@SAElements.8/@ports.3"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.15/@ports.0" target="//@SAElements.8/@ports.3"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.16/@ports.0" target="//@SAElements.8/@ports.4"/>
+  <SAElements xsi:type="components:Connection" source="//@SAElements.18/@ports.0" target="//@SAElements.8/@ports.4"/>
+</components:SoftwareArchitecture>

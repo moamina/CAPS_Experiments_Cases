@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:filesystem="filesystem" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_jXovQIPgEeuvBJpgkE6E3g" type="CAPShwml" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_FF9l4IPzEeuvBJpgkE6E3g" type="2005">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FF-M8IPzEeuvBJpgkE6E3g" type="5024"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FF-M8YPzEeuvBJpgkE6E3g" type="7025">
+      <children xmi:type="notation:Shape" xmi:id="_zgOLUIP_EeuvBJpgkE6E3g" type="Text" fontName="Segoe UI" description="Power Modes">
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zgPZcIP_EeuvBJpgkE6E3g" type="DiagramName">
+          <element xsi:nil="true"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zgPZcYP_EeuvBJpgkE6E3g" type="Description">
+          <element xsi:nil="true"/>
+        </children>
+        <element xsi:nil="true"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zgOLUYP_EeuvBJpgkE6E3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_6lQUUIP_EeuvBJpgkE6E3g" type="3011">
+        <children xmi:type="notation:DecorationNode" xmi:id="_6lRicIP_EeuvBJpgkE6E3g" type="5012"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_6lQUUYP_EeuvBJpgkE6E3g"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_6lQUUoP_EeuvBJpgkE6E3g" fontName="Segoe UI"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_6lQUU4P_EeuvBJpgkE6E3g"/>
+        <element xmi:type="filesystem:PowerMode" href="VASARI.capshwml#//@nodes.0/@modes.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6lQUVIP_EeuvBJpgkE6E3g"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_FF-M8oPzEeuvBJpgkE6E3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_FF-M84PzEeuvBJpgkE6E3g"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FF-M9IPzEeuvBJpgkE6E3g" type="7026">
+      <children xmi:type="notation:Node" xmi:id="_us_t4IP0EeuvBJpgkE6E3g" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_us_t5oP0EeuvBJpgkE6E3g" type="5001"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t54P0EeuvBJpgkE6E3g" type="7005">
+          <children xmi:type="notation:Node" xmi:id="_KWS4QIQNEeuxc-tg5S4cUA" type="3015">
+            <children xmi:type="notation:DecorationNode" xmi:id="_KWS4RIQNEeuxc-tg5S4cUA" type="5016"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_KWS4QYQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_KWS4QoQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:Processor" href="VASARI.capshwml#//@nodes.0/@microcontroller/@processors.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KWS4Q4QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t6IP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t6YP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t6oP0EeuvBJpgkE6E3g" type="7006">
+          <children xmi:type="notation:Node" xmi:id="_RFmB0IQNEeuxc-tg5S4cUA" type="3016">
+            <children xmi:type="notation:DecorationNode" xmi:id="_RFmB1IQNEeuxc-tg5S4cUA" type="5017"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_RFmB0YQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_RFmB0oQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:ADC" href="VASARI.capshwml#//@nodes.0/@microcontroller/@adcs.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RFmB04QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t64P0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t7IP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t7YP0EeuvBJpgkE6E3g" type="7007">
+          <children xmi:type="notation:Node" xmi:id="_SPNVQIQNEeuxc-tg5S4cUA" type="3017">
+            <children xmi:type="notation:DecorationNode" xmi:id="_SPN8UIQNEeuxc-tg5S4cUA" type="5018"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_SPNVQYQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_SPNVQoQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:DAC" href="VASARI.capshwml#//@nodes.0/@microcontroller/@dacs.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SPNVQ4QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t7oP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t74P0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t8IP0EeuvBJpgkE6E3g" type="7008">
+          <children xmi:type="notation:Node" xmi:id="_VC92UIQNEeuxc-tg5S4cUA" type="3018">
+            <children xmi:type="notation:DecorationNode" xmi:id="_VC92VIQNEeuxc-tg5S4cUA" type="5019"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_VC92UYQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_VC92UoQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:Timer" href="VASARI.capshwml#//@nodes.0/@microcontroller/@timers.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VC92U4QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t8YP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t8oP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t84P0EeuvBJpgkE6E3g" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_9KBOwIQNEeuxc-tg5S4cUA" type="3012">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9KB10IQNEeuxc-tg5S4cUA" type="5013"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_9KBOwYQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_9KBOwoQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:VolatileMemory" href="VASARI.capshwml#//@nodes.0/@microcontroller/@memory"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9KBOw4QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t9IP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t9YP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t9oP0EeuvBJpgkE6E3g" type="7010">
+          <children xmi:type="notation:Node" xmi:id="_eCJX0IQNEeuxc-tg5S4cUA" type="3013">
+            <children xmi:type="notation:DecorationNode" xmi:id="_eCJX1IQNEeuxc-tg5S4cUA" type="5014"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_eCJX0YQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_eCJX0oQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:StorageMemory" href="VASARI.capshwml#//@nodes.0/@microcontroller/@programMemory"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eCJX04QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t94P0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t-IP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t-YP0EeuvBJpgkE6E3g" type="7011">
+          <children xmi:type="notation:Node" xmi:id="_fowJQIQNEeuxc-tg5S4cUA" type="3014">
+            <children xmi:type="notation:DecorationNode" xmi:id="_fowJRIQNEeuxc-tg5S4cUA" type="5015"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_fowJQYQNEeuxc-tg5S4cUA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_fowJQoQNEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:StorageMemory" href="VASARI.capshwml#//@nodes.0/@microcontroller/@storageMemory"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fowJQ4QNEeuxc-tg5S4cUA"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t-oP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t-4P0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_us_t_IP0EeuvBJpgkE6E3g" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_us_t_YP0EeuvBJpgkE6E3g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_us_t_oP0EeuvBJpgkE6E3g"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_rybZMIP_EeuvBJpgkE6E3g" type="Text" fontName="Segoe UI" description="Radio Chip">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_rycAQIP_EeuvBJpgkE6E3g" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_rycnUIP_EeuvBJpgkE6E3g" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rybZMYP_EeuvBJpgkE6E3g" x="26" y="611"/>
+        </children>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_us_t4YP0EeuvBJpgkE6E3g"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_us_t4oP0EeuvBJpgkE6E3g" fontName="Segoe UI"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_us_t44P0EeuvBJpgkE6E3g"/>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_us_t5IP0EeuvBJpgkE6E3g"/>
+        <element xmi:type="filesystem:Microcontroller" href="VASARI.capshwml#//@nodes.0/@microcontroller"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_us_t5YP0EeuvBJpgkE6E3g" x="26" y="25" width="271" height="369"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_dbsZoIP-EeuvBJpgkE6E3g" type="Text" fontName="Segoe UI" description="Microcontroller">
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_dbsZooP-EeuvBJpgkE6E3g" type="DiagramName">
+          <element xsi:nil="true"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_dbsZo4P-EeuvBJpgkE6E3g" type="Description">
+          <element xsi:nil="true"/>
+        </children>
+        <element xsi:nil="true"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dbsZoYP-EeuvBJpgkE6E3g" x="80" y="-4" width="253" height="37"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FF-M9YPzEeuvBJpgkE6E3g" type="7027">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_FF-M9oPzEeuvBJpgkE6E3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_FF-M94PzEeuvBJpgkE6E3g"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FF-M-IPzEeuvBJpgkE6E3g" type="7028">
+      <children xmi:type="notation:Node" xmi:id="_QW_Z8IQOEeuxc-tg5S4cUA" type="3010">
+        <children xmi:type="notation:DecorationNode" xmi:id="_QXABAIQOEeuxc-tg5S4cUA" type="5011"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_QW_Z8YQOEeuxc-tg5S4cUA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_QW_Z8oQOEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+        <element xmi:type="filesystem:RFCommunicationDevice" href="VASARI.capshwml#//@nodes.0/@rFCommunicationDevices.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QW_Z84QOEeuxc-tg5S4cUA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_FF-M-YPzEeuvBJpgkE6E3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_FF-M-oPzEeuvBJpgkE6E3g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_p4bM0IQOEeuxc-tg5S4cUA" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_p4bz4IQOEeuxc-tg5S4cUA" type="5003"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_p4bM0YQOEeuxc-tg5S4cUA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_p4bM0oQOEeuxc-tg5S4cUA" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_p4bM04QOEeuxc-tg5S4cUA"/>
+      <element xmi:type="filesystem:HarvestedEnergySource" href="VASARI.capshwml#//@nodes.0/@energySources.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p4bM1IQOEeuxc-tg5S4cUA" x="126" y="630"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_FF9l4YPzEeuvBJpgkE6E3g"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_FF9l4oPzEeuvBJpgkE6E3g" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_FF9l44PzEeuvBJpgkE6E3g"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FF9l5IPzEeuvBJpgkE6E3g"/>
+    <element xmi:type="filesystem:Node" href="VASARI.capshwml#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FF9l5YPzEeuvBJpgkE6E3g" x="90" width="433" height="631"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_XTKlQIQ3EeuoJuTyTgURDQ" type="2005">
+    <children xmi:type="notation:DecorationNode" xmi:id="_XTLzYIQ3EeuoJuTyTgURDQ" type="5024"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XTLzYYQ3EeuoJuTyTgURDQ" type="7025">
+      <children xmi:type="notation:Shape" xmi:id="_pXWBAIsJEeujLbSP_5qSNg" type="Text" fontName="Segoe UI" description="Power Mode">
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_pXWoEIsJEeujLbSP_5qSNg" type="DiagramName">
+          <element xsi:nil="true"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_pXWoEYsJEeujLbSP_5qSNg" type="Description">
+          <element xsi:nil="true"/>
+        </children>
+        <element xsi:nil="true"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pXWBAYsJEeujLbSP_5qSNg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_rbEMQIsJEeujLbSP_5qSNg" type="3011">
+        <children xmi:type="notation:DecorationNode" xmi:id="_rbEzUIsJEeujLbSP_5qSNg" type="5012"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_rbEMQYsJEeujLbSP_5qSNg"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_rbEMQosJEeujLbSP_5qSNg" fontName="Segoe UI"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_rbEMQ4sJEeujLbSP_5qSNg"/>
+        <element xmi:type="filesystem:PowerMode" href="VASARI.capshwml#//@nodes.1/@modes.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rbEMRIsJEeujLbSP_5qSNg"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XTLzYoQ3EeuoJuTyTgURDQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XTLzY4Q3EeuoJuTyTgURDQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XTLzZIQ3EeuoJuTyTgURDQ" type="7026">
+      <children xmi:type="notation:Shape" xmi:id="_tr4_YIsJEeujLbSP_5qSNg" type="Text" fontName="Segoe UI" description="Microcontroller">
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_tr5mcIsJEeujLbSP_5qSNg" type="DiagramName">
+          <element xsi:nil="true"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_tr5mcYsJEeujLbSP_5qSNg" type="Description">
+          <element xsi:nil="true"/>
+        </children>
+        <element xsi:nil="true"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tr4_YYsJEeujLbSP_5qSNg" x="152" y="-1"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_0uopYIsJEeujLbSP_5qSNg" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_0upQcIsJEeujLbSP_5qSNg" type="5001"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQcYsJEeujLbSP_5qSNg" type="7005">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQcosJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQc4sJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQdIsJEeujLbSP_5qSNg" type="7006">
+          <children xmi:type="notation:Node" xmi:id="_qPWKkIsKEeujLbSP_5qSNg" type="3016">
+            <children xmi:type="notation:DecorationNode" xmi:id="_qPWKlIsKEeujLbSP_5qSNg" type="5017"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_qPWKkYsKEeujLbSP_5qSNg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_qPWKkosKEeujLbSP_5qSNg" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:ADC" href="VASARI.capshwml#//@nodes.1/@microcontroller/@adcs.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qPWKk4sKEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQdYsJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQdosJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQd4sJEeujLbSP_5qSNg" type="7007">
+          <children xmi:type="notation:Node" xmi:id="_pEjycIsKEeujLbSP_5qSNg" type="3017">
+            <children xmi:type="notation:DecorationNode" xmi:id="_pEjydIsKEeujLbSP_5qSNg" type="5018"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_pEjycYsKEeujLbSP_5qSNg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_pEjycosKEeujLbSP_5qSNg" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:DAC" href="VASARI.capshwml#//@nodes.1/@microcontroller/@dacs.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pEjyc4sKEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQeIsJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQeYsJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQeosJEeujLbSP_5qSNg" type="7008">
+          <children xmi:type="notation:Node" xmi:id="_brM88IsQEeujLbSP_5qSNg" type="3018">
+            <children xmi:type="notation:DecorationNode" xmi:id="_brM89IsQEeujLbSP_5qSNg" type="5019"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_brM88YsQEeujLbSP_5qSNg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_brM88osQEeujLbSP_5qSNg" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:Timer" href="VASARI.capshwml#//@nodes.1/@microcontroller/@timers.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_brM884sQEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQe4sJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQfIsJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQfYsJEeujLbSP_5qSNg" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_eIYKAIsQEeujLbSP_5qSNg" type="3012">
+            <children xmi:type="notation:DecorationNode" xmi:id="_eIYKBIsQEeujLbSP_5qSNg" type="5013"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_eIYKAYsQEeujLbSP_5qSNg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_eIYKAosQEeujLbSP_5qSNg" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:VolatileMemory" href="VASARI.capshwml#//@nodes.1/@microcontroller/@memory"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eIYKA4sQEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQfosJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQf4sJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQgIsJEeujLbSP_5qSNg" type="7010">
+          <children xmi:type="notation:Node" xmi:id="_i2yZ4IsQEeujLbSP_5qSNg" type="3013">
+            <children xmi:type="notation:DecorationNode" xmi:id="_i2zA8IsQEeujLbSP_5qSNg" type="5014"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_i2yZ4YsQEeujLbSP_5qSNg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_i2yZ4osQEeujLbSP_5qSNg" fontName="Segoe UI"/>
+            <element xmi:type="filesystem:StorageMemory" href="VASARI.capshwml#//@nodes.1/@microcontroller/@programMemory"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i2yZ44sQEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0upQgYsJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0upQgosJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0upQg4sJEeujLbSP_5qSNg" type="7011">
+          <children xmi:type="notation:Shape" xmi:id="_sHrWcIsQEeujLbSP_5qSNg" type="Text" fontName="Segoe UI" description="Radio Chip">
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_sHtLoIsQEeujLbSP_5qSNg" type="DiagramName">
+              <element xsi:nil="true"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_sHtLoYsQEeujLbSP_5qSNg" type="Description">
+              <element xsi:nil="true"/>
+            </children>
+            <element xsi:nil="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sHrWcYsQEeujLbSP_5qSNg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0up3gIsJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0up3gYsJEeujLbSP_5qSNg"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_0up3gosJEeujLbSP_5qSNg" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_0up3g4sJEeujLbSP_5qSNg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_0up3hIsJEeujLbSP_5qSNg"/>
+        </children>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_0uopYYsJEeujLbSP_5qSNg"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_0uopYosJEeujLbSP_5qSNg" fontName="Segoe UI"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_0uopY4sJEeujLbSP_5qSNg"/>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_0uopZIsJEeujLbSP_5qSNg"/>
+        <element xmi:type="filesystem:Microcontroller" href="VASARI.capshwml#//@nodes.1/@microcontroller"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0uopZYsJEeujLbSP_5qSNg" x="44" y="44" width="271" height="280"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XTLzZYQ3EeuoJuTyTgURDQ" type="7027">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XTLzZoQ3EeuoJuTyTgURDQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XTLzZ4Q3EeuoJuTyTgURDQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XTLzaIQ3EeuoJuTyTgURDQ" type="7028">
+      <children xmi:type="notation:Node" xmi:id="_DkK9cIsOEeujLbSP_5qSNg" type="3010">
+        <children xmi:type="notation:DecorationNode" xmi:id="_DkK9dIsOEeujLbSP_5qSNg" type="5011"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_DkK9cYsOEeujLbSP_5qSNg"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_DkK9cosOEeujLbSP_5qSNg" fontName="Segoe UI"/>
+        <element xmi:type="filesystem:RFCommunicationDevice" href="VASARI.capshwml#//@nodes.1/@rFCommunicationDevices.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DkK9c4sOEeujLbSP_5qSNg"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XTLzaYQ3EeuoJuTyTgURDQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XTLzaoQ3EeuoJuTyTgURDQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OvOA8IsLEeujLbSP_5qSNg" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OvOA9YsLEeujLbSP_5qSNg" type="5003"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OvOA8YsLEeujLbSP_5qSNg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OvOA8osLEeujLbSP_5qSNg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_OvOA84sLEeujLbSP_5qSNg"/>
+      <element xmi:type="filesystem:HarvestedEnergySource" href="VASARI.capshwml#//@nodes.1/@energySources.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OvOA9IsLEeujLbSP_5qSNg" x="108" y="558"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_XTKlQYQ3EeuoJuTyTgURDQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_XTKlQoQ3EeuoJuTyTgURDQ" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_XTKlQ4Q3EeuoJuTyTgURDQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_XTKlRIQ3EeuoJuTyTgURDQ"/>
+    <element xmi:type="filesystem:Node" href="VASARI.capshwml#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XTKlRYQ3EeuoJuTyTgURDQ" x="558" width="379" height="559"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_DnJfUIsWEeujLbSP_5qSNg" type="2005">
+    <children xmi:type="notation:DecorationNode" xmi:id="_DnJfVosWEeujLbSP_5qSNg" type="5024"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_DnJfV4sWEeujLbSP_5qSNg" type="7025">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DnJfWIsWEeujLbSP_5qSNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DnJfWYsWEeujLbSP_5qSNg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_DnJfWosWEeujLbSP_5qSNg" type="7026"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_DnJfW4sWEeujLbSP_5qSNg" type="7027">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DnJfXIsWEeujLbSP_5qSNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DnJfXYsWEeujLbSP_5qSNg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_DnJfXosWEeujLbSP_5qSNg" type="7028">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DnJfX4sWEeujLbSP_5qSNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DnJfYIsWEeujLbSP_5qSNg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gCjwAIsWEeujLbSP_5qSNg" type="3020">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gCjwBYsWEeujLbSP_5qSNg" type="5025">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gCjwBosWEeujLbSP_5qSNg" y="5"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_gCjwAYsWEeujLbSP_5qSNg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gCjwAosWEeujLbSP_5qSNg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_gCjwA4sWEeujLbSP_5qSNg"/>
+      <element xmi:type="filesystem:CCTVcamera" href="VASARI.capshwml#//@nodes.2/@cctvcameras.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gCjwBIsWEeujLbSP_5qSNg" x="100" y="-34"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_DnJfUYsWEeujLbSP_5qSNg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_DnJfUosWEeujLbSP_5qSNg" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_DnJfU4sWEeujLbSP_5qSNg"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_DnJfVIsWEeujLbSP_5qSNg"/>
+    <element xmi:type="filesystem:Node" href="VASARI.capshwml#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DnJfVYsWEeujLbSP_5qSNg" x="1124" y="108" width="407" height="469"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_jXovQYPgEeuvBJpgkE6E3g"/>
+  <element xmi:type="filesystem:NodeSpecification" href="VASARI.capshwml#/"/>
+</notation:Diagram>

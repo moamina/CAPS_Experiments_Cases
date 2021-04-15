@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filesystem:NodeSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:filesystem="filesystem">
+  <nodes name="Weather Station" OS="TinyOS" middleware="" macProtocol="ZIGBEE" routingProtocol="GEAR:" transportProtocol="">
+    <energySources xsi:type="filesystem:HarvestedEnergySource" name="Battery" initialStoredEnergy="10.142"/>
+    <modes name="Active"/>
+    <microcontroller name="ATMega128">
+      <processors name="VAR CPU" frequency="8" cpi="1.0"/>
+      <adcs/>
+      <dacs/>
+      <timers name="Timer"/>
+      <memory name="SRAM" size="4"/>
+      <programMemory name="EEPROM" size="4"/>
+      <storageMemory name="Flash" size="128"/>
+    </microcontroller>
+    <rFCommunicationDevices name="CC 2420" frequency="2.4" modulation="0" encryption="0"/>
+  </nodes>
+  <nodes name="People Counter" OS="TinyOS" macProtocol="ZIGBEE" routingProtocol="GEAR" transportProtocol="">
+    <energySources xsi:type="filesystem:HarvestedEnergySource" name="3.6V AA" initialStoredEnergy="14505.0"/>
+    <modes name="Active"/>
+    <microcontroller name="AM437x">
+      <adcs/>
+      <dacs/>
+      <timers name="Timer"/>
+      <memory name="SRAM - 4 Kb"/>
+      <programMemory name="EEPROM" size="4"/>
+    </microcontroller>
+    <rFCommunicationDevices name="CC2420" frequency="2400.0"/>
+  </nodes>
+  <nodes name="CCTV Camera" macProtocol="">
+    <cctvcameras name="" FrameRate="1.0"/>
+  </nodes>
+</filesystem:NodeSpecification>
