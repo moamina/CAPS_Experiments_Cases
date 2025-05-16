@@ -1,1 +1,1 @@
-# CupcarbonSimulationProject
+This repository showcases a collection of engaging cases, innovative experiments, and exciting simulation projects created using caps. Explore the diverse possibilities and discover the potential they hold!
